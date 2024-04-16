@@ -1,5 +1,7 @@
 # 모던 리액트 딥 다이브 문제 모음
 
+## 1장
+
 1. 다음 코드에서 버튼을 클릭했을 때 화면에 어떻게 보이는지, 리액트에서 동등 비교하는 방법과 함께 설명해 주세요.
 ```jsx
 import { memo, useState } from 'react'
@@ -79,4 +81,33 @@ const truck: Truck = {
 
 horn(truck);
 ```
+
+## 2장
+
+1. 다음 코드를 트랜스파일했을 때 출력이 어떻게 되는지 작성해 주세요.(Pseudo code로 작성해도 됩니다.)
+```jsx
+function Input(props) {
+  return (
+    <input type="text" onChange={props.onChange}/>
+  )
+}
+
+const Component = (props) => {
+  const handleChange = (event) => {
+    console.log(event.target.value);
+  }
+
+  return (
+    <div required value="hi">
+      <Input onChange={handleChange} />
+    </div>
+  );
+}
+```
+
+2. 브라우저가 웹사이트를 요청 하고 화면을 그리는 과정을 설명해 주세요.
+3. 가상 DOM에 대한 일반적인 오해는, 일반적인 DOM을 관리하는 브라우저보다 빠르다는 것입니다. 이것이 오해인 이유를 설명해 주세요.
+4. 리액트가 렌더링 되는 과정에 대해서 설명해 주세요.
+5. 클래스형 컴포넌트를 공부해야 하는 이유는 무엇인가요?
+6. 무조건 메모이제이션을 하는게 좋을까요? 아니면 필요한 곳에만 메모이제이션을 하는게 좋을까요?
 
